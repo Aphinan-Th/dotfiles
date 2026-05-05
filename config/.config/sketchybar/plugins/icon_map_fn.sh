@@ -372,7 +372,7 @@ function icon_map() {
     icon_result=":sublime_text:"
     ;;
   "Warp")
-    icon_result=":warp:"
+    icon_result=":terminal:"
     ;;
   "Messages" | "信息" | "Nachrichten")
     icon_result=":messages:"
@@ -424,6 +424,15 @@ function icon_map() {
     ;;
   "WhatsApp")
     icon_result=":whats_app:"
+    ;;
+  "Zen" | "Zen Browser" | "Twilight")
+    icon_result=":zen_browser:"
+    ;;
+  "Claude")
+    icon_result=":claude:"
+    ;;
+  "Basecamp" | "Basecamp.app")
+    icon_result=":basecamp:"
     ;;
   *)
     icon_result=":default:"

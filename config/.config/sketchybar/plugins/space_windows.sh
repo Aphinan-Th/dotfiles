@@ -17,7 +17,7 @@ update_workspace() {
   if [ -n "$apps" ] && [ "$apps" != "" ]; then
     while IFS= read -r app; do
       if [ -n "$app" ] && [ "$app" != "" ]; then
-        icon_strip+=" $($CONFIG_DIR/plugins/icon_map_fn.sh "$app")"
+        icon_strip+="$($CONFIG_DIR/plugins/icon_map_fn.sh "$app")"
       fi
     done <<< "$apps"
   fi
@@ -46,7 +46,7 @@ if [ "$SENDER" = "space_windows_change" ]; then
   if [ "${apps}" != "" ] && [ "${apps}" != "null" ]; then
     while read -r app; do
       if [ -n "$app" ]; then
-        icon_strip+=" $($CONFIG_DIR/plugins/icon_map_fn.sh "$app")"
+        icon_strip+="$($CONFIG_DIR/plugins/icon_map_fn.sh "$app")"
       fi
     done <<<"${apps}"
   fi
