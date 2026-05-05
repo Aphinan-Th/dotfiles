@@ -59,8 +59,8 @@ fi
 # ===================================================================
 
 # Use Neovim (craftzdog config)
-alias vim='NVIM_APPNAME=craftzdog/dotfiles-public/.config/nvim nvim'
-
+# alias vim='NVIM_APPNAME=craftzdog/dotfiles-public/.config/nvim nvim'
+alias vim='nvim'
 # Modern ls replacement (eza)
 alias ls="eza --color=always --long --git --no-filesize \
   --icons=always --no-time --no-user --no-permissions"
