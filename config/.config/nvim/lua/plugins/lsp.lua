@@ -183,7 +183,7 @@ return {
 				{
 					"gd",
 					function()
-						-- DO NOT RESUSE WINDOW
+						-- DO NOT REUSE WINDOW
 						require("telescope.builtin").lsp_definitions({ reuse_win = false })
 					end,
 					desc = "Goto Definition",

@@ -17,7 +17,7 @@ return {
             { "<leader>zd", ":CopilotChatDocs<CR>", mode = "v", desc = "Generate Docs" },
             { "<leader>zt", ":CopilotChatTests<CR>", mode = "v", desc = "Generate Tests" },
             { "<leader>zm", ":CopilotChatCommit<CR>", mode = "n", desc = "Generate Commit Message" },
-            { "<leader>zs", ":CopilotChatCommit<CR>", mode = "v", desc = "Generate Commit for Selection" },
+            { "<leader>zs", ":CopilotChatCommitStaged<CR>", mode = "n", desc = "Generate Commit for Staged" },
         },
     },
 }
