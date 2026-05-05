@@ -6,5 +6,9 @@
 # https://felixkratz.github.io/SketchyBar/config/events#events-and-scripting
 
 if [ "$SENDER" = "front_app_switched" ]; then
-  sketchybar --set $NAME label="$INFO" icon="$($CONFIG_DIR/plugins/icon_map_fn.sh "$INFO")"
+  y_offset=0
+  if [ "$INFO" = "Warp" ]; then
+    y_offset=2
+  fi
+  sketchybar --set $NAME label="$INFO" icon="$($CONFIG_DIR/plugins/icon_map_fn.sh "$INFO")" icon.y_offset=$y_offset
 fi

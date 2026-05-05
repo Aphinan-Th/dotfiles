@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source "$CONFIG_DIR/colors.sh" # Loads all defined colors
+source "$CONFIG_DIR/colors.sh"
 
 # Get the current focused workspace from Aerospace
 FOCUSED_WORKSPACE=$(aerospace list-workspaces --focused)
@@ -9,18 +9,17 @@ FOCUSED_WORKSPACE=$(aerospace list-workspaces --focused)
 WORKSPACE_ID=${NAME#space.}
 
 if [ "$WORKSPACE_ID" = "$FOCUSED_WORKSPACE" ]; then
-  sketchybar --set $NAME background.drawing=on
+  sketchybar --set $NAME \
+    icon.color=$ACCENT_COLOR \
+    icon.shadow.drawing=on \
+    icon.shadow.color=$ACCENT_COLOR \
+    icon.shadow.distance=0 \
+    label.color=$ACCENT_COLOR \
+    icon.font="SF Pro:Bold:13.0"
 else
-  sketchybar --set $NAME background.drawing=off
+  sketchybar --set $NAME \
+    icon.color=$DIM_WHITE \
+    icon.shadow.drawing=off \
+    label.color=$DIM_WHITE \
+    icon.font="SF Pro:Bold:12.0"
 fi
-
-# if [ "$WORKSPACE_ID" = "$FOCUSED_WORKSPACE" ]; then
-#   sketchybar --set $NAME background.drawing=on \
-#     background.color=$ACCENT_COLOR \
-#     label.color=$BAR_COLOR \
-#     icon.color=$BAR_COLOR
-# else
-#   sketchybar --set $NAME background.drawing=off \
-#     label.color=$ACCENT_COLOR \
-#     icon.color=$ACCENT_COLOR
-# fi
