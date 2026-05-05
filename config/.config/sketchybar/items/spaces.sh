@@ -25,7 +25,6 @@ for workspace in "${WORKSPACES[@]}"; do
     background.drawing=off \
     padding_left=4 \
     padding_right=4 \
-    label.y_offset=-1 \
     script="$PLUGIN_DIR/space.sh" \
     click_script="aerospace workspace $workspace" \
     --subscribe "$SPACE" aerospace_workspace_change front_app_switched window_focus
