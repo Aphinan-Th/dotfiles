@@ -39,6 +39,16 @@ return {
 		},
 		keys = {
 			{
+				"<leader><space>",
+				function()
+					require("telescope.builtin").find_files({
+						no_ignore = true,
+						hidden = true,
+					})
+				end,
+				desc = "Find Files (including hidden and ignored)",
+			},
+			{
 				"<leader>fP",
 				function()
 					require("telescope.builtin").find_files({
@@ -52,11 +62,11 @@ return {
 				function()
 					local builtin = require("telescope.builtin")
 					builtin.find_files({
-						no_ignore = false,
+						no_ignore = true,
 						hidden = true,
 					})
 				end,
-				desc = "Lists files in your current working directory, respects .gitignore",
+				desc = "Lists all files including hidden and ignored",
 			},
 			{
 				";r",
@@ -150,6 +160,21 @@ return {
 				layout_config = { prompt_position = "top" },
 				sorting_strategy = "ascending",
 				winblend = 0,
+				file_ignore_patterns = {
+					"%.git/",
+					"node_modules/",
+					"%.next/",
+					"%.venv/",
+					"venv/",
+					"%.ruff_cache/",
+					"__pycache__/",
+					"%.DS_Store",
+					"dist/",
+					"build/",
+					"coverage/",
+					"%.turbo/",
+					"%.cache/",
+				},
 				mappings = {
 					n = {},
 				},
